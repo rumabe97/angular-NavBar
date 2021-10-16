@@ -5,35 +5,43 @@ export const config: INavbarConfig = {
     items: [
         {
             icon: 'dashboard',
-            name: 'Dashboard'
+            name: 'Dashboard',
+            tooltip:false,
         },
         {
             icon: 'person',
-            name: 'Users'
+            name: 'Users',
+            tooltip:false,
         },
         {
             icon: 'email',
-            name: 'Messages'
+            name: 'Messages',
+            tooltip:false,
         },
         {
             icon: 'analytics',
-            name: 'Analytics'
+            name: 'Analytics',
+            tooltip:false,
         },
         {
             icon: 'folder',
-            name: 'File Manager'
+            name: 'File Manager',
+            tooltip:false,
         },
         {
             icon: 'shopping_cart',
-            name: 'Order'
+            name: 'Order',
+            tooltip:false,
         },
         {
             icon: 'favorite_border',
-            name: 'Saved'
+            name: 'Saved',
+            tooltip:false,
         },
         {
             icon: 'settings',
-            name: 'Settings'
+            name: 'Settings',
+            tooltip:false,
         }
     ],
     user: null,

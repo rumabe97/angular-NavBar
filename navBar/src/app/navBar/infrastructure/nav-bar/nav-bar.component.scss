@@ -9,7 +9,6 @@
   width: 20%;
   background: #11101d;
   padding: 1%;
-  z-index: 99;
   transition: all 0.5s ease;
   color: #fff;
 
@@ -43,6 +42,30 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5%;
+    gap: 7%;
+    padding: 3% 8%;
+  }
+
+  &__item:hover{
+    background: #FFF;
+    color: #11101d;
+    border-radius: 12px;
+  }
+
+  &__tooltip{
+    position: absolute;
+    color: black;
+    left: calc(100% + 15px);
+    z-index: 3;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 5%;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 400;
+    //opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: 0s;
   }
 }

@@ -5,9 +5,10 @@
     </div>
 
     <div class="navBar__items">
-        <div class="navBar__item" *ngFor="let item of config.items">
+        <div class="navBar__item" *ngFor="let item of config.items" (mouseenter) ="mouseEnter(item) "  (mouseleave) ="mouseLeave(item)">
             <mat-icon class="navBar__icon">{{item.icon}}</mat-icon>
             <p>{{item.name}}</p>
+            <p class="navBar__tooltip" *ngIf="notComplete && item.tooltip">{{item.name}}</p>
         </div>
     </div>
 </div>

@@ -10,6 +10,7 @@ export interface INavBarItem{
     icon:string;
     name:string;
     child?:INavBarItem[];
+    tooltip:boolean;
 }
 
 export interface INavBarUser{
