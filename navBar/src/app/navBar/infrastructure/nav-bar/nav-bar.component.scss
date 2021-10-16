@@ -1,0 +1,34 @@
+:host(app-nav-bar) {
+  display: flex;
+  flex-direction: column;
+}
+
+.navBar {
+  position: fixed;
+  height: 100%;
+  width: 20%;
+  background: #11101d;
+  padding: 1%;
+  z-index: 99;
+  transition: all 0.5s ease;
+  color: #fff;
+
+  &__logo {
+    height: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+
+  .logo__name {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+  }
+}

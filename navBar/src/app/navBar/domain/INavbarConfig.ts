@@ -2,6 +2,8 @@ export interface  INavbarConfig {
     userPosition:string,
     items:INavBarItem[],
     user:INavBarUser,
+    logo:string;
+    logoName:string;
 }
 
 export interface INavBarItem{
