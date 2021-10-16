@@ -1,26 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { INavbarConfig } from './navBar/domain/INavbarConfig';
-
+import { config } from './config';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent  implements OnInit{
+export class AppComponent {
   title = 'navBar';
-  config: INavbarConfig;
+  config: INavbarConfig = { ...config };
 
-  ngOnInit(): void {
-    this.config={
-      userPosition:'up',
-      items:[],
-      user:null,
-      logo:'',
-      logoName:'Staffit'
-    }
-  }
 
-  changeRoute(route:any){
+  changeRoute(route: any) {
     console.log('change to -->')
   }
 }
