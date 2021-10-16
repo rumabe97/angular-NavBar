@@ -44,7 +44,12 @@ export const config: INavbarConfig = {
             tooltip:false,
         }
     ],
-    user: null,
+    user: {
+        email:'Ruben.mbermejo@bosonit.com',
+        name:'Ruben Martinez',
+        logOutIcon:'logout',
+        img:'../../../../assets/images/profile.jpeg'
+    },
     logo: '',
     logoName: 'Staffit'
 }
