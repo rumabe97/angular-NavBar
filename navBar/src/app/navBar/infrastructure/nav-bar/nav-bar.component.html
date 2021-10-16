@@ -1,13 +1,14 @@
-<div class="navBar">
-    <div class="navBar__logo">
-        <div class="logo__name">{{config.logoName}}</div>
-        <mat-icon class="navBar__icon">menu</mat-icon>
+<div class="navBar {{notComplete ? 'navBar-small': ''}}">
+    <div class="navBar__logo {{notComplete ? 'navBar__logo-center': ''}} ">
+        <div class="logo__name" *ngIf="!notComplete">{{config.logoName}}</div>
+        <mat-icon class="navBar__icon" (click)="changeComplete()">menu</mat-icon>
     </div>
 
     <div class="navBar__items">
-        <div class="navBar__item" *ngFor="let item of config.items" (mouseenter) ="mouseEnter(item) "  (mouseleave) ="mouseLeave(item)">
+        <div class="navBar__item {{notComplete ? 'navBar__item-center': ''}}" *ngFor="let item of config.items" (mouseenter)="mouseEnter(item) "
+            (mouseleave)="mouseLeave(item)">
             <mat-icon class="navBar__icon">{{item.icon}}</mat-icon>
-            <p>{{item.name}}</p>
+            <p *ngIf="!notComplete">{{item.name}}</p>
             <p class="navBar__tooltip" *ngIf="notComplete && item.tooltip">{{item.name}}</p>
         </div>
     </div>

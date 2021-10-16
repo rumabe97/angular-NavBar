@@ -12,11 +12,19 @@
   transition: all 0.5s ease;
   color: #fff;
 
+  &-small{
+      width: 4%;
+  }
+
   &__logo {
     height: 7%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    &-center{
+        justify-content: center;
+    }
   }
 
   &__icon {
@@ -29,6 +37,7 @@
     font-size: 20px;
     font-weight: 600;
     transition: all 0.5s ease;
+    user-select: none;
   }
 
   &__items{
@@ -44,6 +53,16 @@
     align-items: center;
     gap: 7%;
     padding: 3% 8%;
+    user-select: none;
+    cursor: pointer;
+    height: 7%;
+      p{
+          margin: 0;
+      }
+
+      &-center{
+          justify-content: center;
+      }
   }
 
   &__item:hover{
@@ -56,10 +75,9 @@
     position: absolute;
     color: black;
     left: calc(100% + 15px);
-    z-index: 3;
     background: #fff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    padding: 5%;
+    padding: 16%;
     border-radius: 4px;
     font-size: 15px;
     font-weight: 400;
@@ -67,5 +85,10 @@
     white-space: nowrap;
     pointer-events: none;
     transition: 0s;
+    min-width: 6rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }

@@ -11,7 +11,7 @@ export class NavBarComponent implements OnInit {
   @Input() config: INavbarConfig;
   @Output() route = new EventEmitter<any>();
 
-  notComplete: boolean = true;
+  notComplete: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -23,5 +23,9 @@ export class NavBarComponent implements OnInit {
 
   mouseLeave(item: any) {
     item.tooltip = false;
+  }
+
+  changeComplete(){
+    this.notComplete=!this.notComplete;
   }
 }
