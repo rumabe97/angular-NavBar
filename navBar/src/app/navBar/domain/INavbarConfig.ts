@@ -11,6 +11,7 @@ export interface INavBarItem{
     name:string;
     child?:INavBarItem[];
     tooltip:boolean;
+    route?:string;
 }
 
 export interface INavBarUser{
@@ -18,4 +19,5 @@ export interface INavBarUser{
     img:string,
     logOutIcon:string,
     email:string
+    route?:string;
 }
