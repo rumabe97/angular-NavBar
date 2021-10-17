@@ -5,8 +5,8 @@
     </div>
 
     <div class="navBar__items">
-        <div class="navBar__item {{notComplete ? 'navBar__item-center': ''}}" *ngFor="let item of config.items"
-            (mouseenter)="mouseEnter(item) " (mouseleave)="mouseLeave(item)">
+        <div class="{{notComplete ? 'navBar__item-center': ''}} {{active===item.name ? 'navBar__item-active' : 'navBar__item'}}"
+            *ngFor="let item of config.items" (mouseenter)="mouseEnter(item) " (mouseleave)="mouseLeave(item)" (click)="activeItem(item)">
             <mat-icon class="navBar__icon">{{item.icon}}</mat-icon>
             <p *ngIf="!notComplete">{{item.name}}</p>
             <p class="navBar__tooltip" *ngIf="notComplete && item.tooltip">{{item.name}}</p>

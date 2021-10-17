@@ -8,16 +8,18 @@
   height: 100%;
   width: 12%;
   background: #11101d;
-  padding: 1%;
   transition: all 0.5s ease;
   color: #fff;
 
   &-small {
-    width: 2%;
+    width: 4%;
   }
 
   &__logo {
     height: 7%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,8 +32,8 @@
   &__icon {
     transition: all 0.5s ease;
     cursor: pointer;
-    &-logout{
-        margin: auto;
+    &-logout {
+      margin: auto;
     }
   }
 
@@ -49,6 +51,10 @@
     height: 82%;
     overflow-y: auto;
     overflow-x: hidden;
+    gap: 1%;
+    width: 100%;
+    padding: 8% 0 8% 8%;
+    box-sizing: border-box;
   }
 
   &__item {
@@ -69,12 +75,28 @@
     &-center {
       justify-content: center;
     }
+
+    &-active {
+      background: #fff;
+      color: #11101d;
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 7%;
+      padding: 3% 8%;
+      user-select: none;
+      cursor: pointer;
+      height: 7%;
+    }
   }
 
   &__item:hover {
     background: #fff;
     color: #11101d;
     border-radius: 12px;
+    width: 80%;
   }
 
   &__tooltip {
@@ -104,6 +126,8 @@
     width: 100%;
     height: 8%;
     user-select: none;
+    padding: 0 8%;
+    box-sizing: border-box;
   }
 
   img {
@@ -131,13 +155,13 @@
       white-space: nowrap;
     }
 
-    .name{
-        text-overflow: ellipsis;
-        overflow: hidden;
-        font-size: 15px;
-        font-weight: 400;
-        color: #fff;
-        white-space: nowrap;
+    .name {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+      white-space: nowrap;
     }
   }
 }

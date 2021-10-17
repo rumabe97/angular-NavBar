@@ -12,6 +12,8 @@ export class NavBarComponent implements OnInit {
   @Output() route = new EventEmitter<any>();
 
   notComplete: boolean = false;
+  active: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
@@ -25,7 +27,12 @@ export class NavBarComponent implements OnInit {
     item.tooltip = false;
   }
 
-  changeComplete(){
-    this.notComplete=!this.notComplete;
+  changeComplete() {
+    this.notComplete = !this.notComplete;
+  }
+
+  activeItem(item: any) {
+    this.active = item.name;
+    this.route.emit(item);
   }
 }
