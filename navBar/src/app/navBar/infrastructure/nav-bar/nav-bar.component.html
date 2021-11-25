@@ -6,13 +6,23 @@
 
     <div class="navBar__items">
         <div class="{{notComplete ? 'navBar__item-center': ''}} {{active===item.name ? 'navBar__item-active' : 'navBar__item'}}"
-            *ngFor="let item of config.items" (mouseenter)="mouseEnter(item) " (mouseleave)="mouseLeave(item)" (click)="activeItem(item)">
-            <mat-icon class="navBar__icon">{{item.icon}}</mat-icon>
-            <p *ngIf="!notComplete">{{item.name}}</p>
-            <p class="navBar__tooltip" *ngIf="notComplete && item.tooltip">{{item.name}}</p>
+            *ngFor="let item of config.items" (mouseenter)="mouseEnter(item) " (mouseleave)="mouseLeave(item)"
+            (click)="activeItem(item)">
+            <div class="navBar__item-complete">
+                <mat-icon class="navBar__icon">{{item.icon}}</mat-icon>
+                <p *ngIf="!notComplete">{{item.name}}</p>
+                <p class="navBar__tooltip" *ngIf="notComplete && item.tooltip">{{item.name}}</p>
+            </div>
+            <div class="{{notComplete ? 'navBar__item-center': ''}} {{active===item.name ? 'navBar__item-active' : 'navBar__item'}} navBar__subItem"
+               *ngFor="let subItem of item.childern" (mouseenter)="mouseEnter(subItem) " (mouseleave)="mouseLeave(subItem)"
+               (click)="activeItem(subItem)">
+               <mat-icon class="navBar__icon">{{subItem.icon}}</mat-icon>
+               <p *ngIf="!notComplete">{{subItem.name}}</p>
+               <p class="navBar__tooltip" *ngIf="notComplete && subItem.tooltip">{{subItem.name}}</p>
+           </div> 
         </div>
     </div>
-
+    
     <div class="navBar__profile">
         <img src="{{config.user.img}}" alt="profileImg" *ngIf="!notComplete">
         <div class="navBar__userValues" *ngIf="!notComplete">

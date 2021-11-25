@@ -9,7 +9,7 @@ export interface  INavbarConfig {
 export interface INavBarItem{
     icon:string;
     name:string;
-    child?:INavBarItem[];
+    childern?:INavBarItem[];
     tooltip:boolean;
 }
 
