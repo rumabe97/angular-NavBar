@@ -8,7 +8,7 @@ import { INavbarConfig } from '../../domain/INavbarConfig';
   encapsulation: ViewEncapsulation.None,
 })
 export class NavBarComponent implements OnInit {
-  @Input() config: INavbarConfig;
+  @Input() config: INavbarConfig | any;
   @Output() route = new EventEmitter<any>();
 
   notComplete: boolean = false;

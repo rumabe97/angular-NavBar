@@ -1,7 +1,7 @@
 <div class="navBar {{notComplete ? 'navBar-small': ''}}">
     <div class="navBar__logo {{notComplete ? 'navBar__logo-center': ''}} ">
         <div class="logo__name" *ngIf="!notComplete">{{config.logoName}}</div>
-        <mat-icon class="navBar__icon" (click)="changeComplete()">menu</mat-icon>
+        <mat-icon class="navBar__icon" (click)="changeComplete()" fontIcon="menu"></mat-icon>
     </div>
 
     <div class="navBar__items">
@@ -13,16 +13,16 @@
                 <p *ngIf="!notComplete">{{item.name}}</p>
                 <p class="navBar__tooltip" *ngIf="notComplete && item.tooltip">{{item.name}}</p>
             </div>
-            <div class="{{notComplete ? 'navBar__item-center': ''}} {{active===item.name ? 'navBar__item-active' : 'navBar__item'}} navBar__subItem"
-               *ngFor="let subItem of item.childern" (mouseenter)="mouseEnter(subItem) " (mouseleave)="mouseLeave(subItem)"
-               (click)="activeItem(subItem)">
-               <mat-icon class="navBar__icon">{{subItem.icon}}</mat-icon>
-               <p *ngIf="!notComplete">{{subItem.name}}</p>
-               <p class="navBar__tooltip" *ngIf="notComplete && subItem.tooltip">{{subItem.name}}</p>
-           </div> 
+<!--            <div class="{{notComplete ? 'navBar__item-center': ''}} {{active===item.name ? 'navBar__item-active' : 'navBar__item'}} navBar__subItem"-->
+<!--               *ngFor="let subItem of item.childern" (mouseenter)="mouseEnter(subItem) " (mouseleave)="mouseLeave(subItem)"-->
+<!--               (click)="activeItem(subItem)">-->
+<!--               <mat-icon class="navBar__icon">{{subItem.icon}}</mat-icon>-->
+<!--               <p *ngIf="!notComplete">{{subItem.name}}</p>-->
+<!--               <p class="navBar__tooltip" *ngIf="notComplete && subItem.tooltip">{{subItem.name}}</p>-->
+<!--           </div>-->
         </div>
     </div>
-    
+
     <div class="navBar__profile">
         <img src="{{config.user.img}}" alt="profileImg" *ngIf="!notComplete">
         <div class="navBar__userValues" *ngIf="!notComplete">
